@@ -1,0 +1,37 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+class Base{
+    public:
+     virtual void display(){
+      cout << " You are printing Base class member funtion " << endl;  
+    }
+    };
+    
+class derived : public Base{
+    public:
+     virtual void display(){
+     cout << "You are printing derived class member function" <<endl;   
+    }
+};
+int main() {
+    // Class objects 
+Base baseobj;
+derived deriveobj;
+
+
+// Class Object Pointers 
+Base *base_ptr;
+derived *derive_ptr;
+
+// base object pointer storing address of derive class object
+// Or basucally pointing the derived class object
+
+base_ptr = &deriveobj;// base object pointer is pointing a deived object
+
+base_ptr->display();
+
+
+    return 0;
+}
